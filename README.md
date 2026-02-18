@@ -32,3 +32,14 @@ Para ejecutar este proyecto, asegúrate de tener instalado el **JDK (Java Develo
    Abre una terminal en la raíz del proyecto y ejecuta:
    ```bash
    javac com/example/*.java
+
+
+## Salida Esperada del Programa
+
+Demostración
+Caracteristicas De Los Productos(Getter)
+Producto 1 - Nombre: Laptop Gaming | Precio: 1000.0
+Producto 2 - ID: P123 | Stock: 50
+Caracteristicas De Los Productos(toString)
+Producto [ID: P34, Nombre: Laptop Gaming, Precio: 1000.0, Stock: 0]
+Producto [ID: P123, Nombre: Laptop, Precio: 1200.0, Stock: 50]
