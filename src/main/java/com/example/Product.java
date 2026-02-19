@@ -9,8 +9,8 @@ public class Product {
     private int stock;
 
     Product() {
-        this.id = null;
-        this.name = null;
+        this.id = "";
+        this.name = "";
         this.price = 0.0;
         this.stock = 0;
     }
@@ -50,11 +50,7 @@ public class Product {
     public void setPrice(double price) {
         if (price >= 0) {
             this.price = price;
-        } else {
-
-            System.out.println("Error: El saldo no puede ser negativo.");
-
-        }
+        } 
 
     }
 
@@ -62,11 +58,11 @@ public class Product {
 
         if (stock >= 0) {
             this.stock = stock;
-        } else {
-            System.out.println("Error: El saldo no puede ser negativo.");
-        }
+        } 
+        
     }
 
+    @Override
     public String toString() {
         return "Producto [ID: " + this.id + ", Nombre: " + this.name + ", Precio: " + this.price + ", Stock: "
                 + this.stock + "]";
