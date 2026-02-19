@@ -14,7 +14,7 @@ Este proyecto es una aplicación de consola en Java que demuestra los conceptos 
 El sistema gestiona una clase `Product` que implementa:
 * **Encapsulamiento:** Atributos privados con métodos Getter y Setter.
 * **Constructores:** Uso de constructor por defecto (con inicialización segura) y parametrizado.
-* **Manejo de Excepciones:** Validación de datos en los métodos Setter mediante el lanzamiento de `IllegalArgumentException` para evitar valores negativos en precio y stock.
+* **Manejo de Excepciones:** Validación de datos en los métodos Setter mediante para evitar valores negativos en precio y stock.
 * **Sobreescritura:** Implementación del método `toString()` para una representación clara de los objetos.
 
 ---
@@ -25,14 +25,14 @@ Para asegurar que el proyecto compile y resuelva correctamente las dependencias 
 
 ### 1. Compilación
 Abre una terminal y ejecuta el siguiente comando para compilar todas las clases dentro de su estructura de paquetes:
-```bash
-javac -d . src/main/java/com/example/*.java
 
-### 2. Compilación
+    javac -d . src/main/java/com/example/*.java
+
+### 2. Ejecución
 
 Una vez compilado, ejecuta el programa llamando a la clase principal por su nombre de paquete completo:
 
-java com.example.Main
+    java com.example.Main
 
 ---
 
