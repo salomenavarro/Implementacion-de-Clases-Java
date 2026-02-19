@@ -14,7 +14,7 @@ Este proyecto es una aplicación de consola en Java que demuestra los conceptos 
 El sistema gestiona una clase `Product` que implementa:
 * **Encapsulamiento:** Atributos privados con métodos Getter y Setter.
 * **Constructores:** Uso de constructor por defecto (con inicialización segura) y parametrizado.
-* **Manejo de Excepciones:** Validación de datos en los métodos Setter mediante para evitar valores negativos en precio y stock.
+* **Manejo de Excepciones:** Validación de datos en los métodos Setter mediante el lanzamiento de `IllegalArgumentException` para evitar valores negativos en precio y stock.
 * **Sobreescritura:** Implementación del método `toString()` para una representación clara de los objetos.
 
 ---
@@ -40,12 +40,18 @@ Una vez compilado, ejecuta el programa llamando a la clase principal por su nomb
 
 Al ejecutar la aplicación, el resultado en consola será:
 
---- Demostración de Gestión de Productos ---
-Caracteristicas (Getter):
-Producto 1 - Nombre: Laptop Gaming | Precio: 1000.0
-Producto 2 - ID: P123 | Stock: 50
+=== SISTEMA DE GESTIÓN DE PRODUCTOS ===
 
-Caracteristicas (toString):
+--- Consulta Individual (Getters) ---
+Producto 1: Laptop Gaming ($1000.0)
+Producto 2: Smartphone (25 unidades)
+
+--- Listado Completo (toString) ---
 Producto [ID: P34, Nombre: Laptop Gaming, Precio: 1000.0, Stock: 0]
-Producto [ID: P123, Nombre: Laptop, Precio: 1200.0, Stock: 50]
+Producto [ID: P123, Nombre: Smartphone, Precio: 800.0, Stock: 25]
+
+--- Intento de asignar precio negativo ---
+CAPTURA DE ERROR: El precio no puede ser negativo.
+
+Programa finalizado correctamente.
 

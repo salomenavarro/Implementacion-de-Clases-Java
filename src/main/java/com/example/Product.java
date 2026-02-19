@@ -1,71 +1,59 @@
 package com.example;
 
+/**
+ * Clase que representa un Producto con validaciones de negocio.
+ */
 public class Product {
-
     private String id;
     private String name;
-
     private double price;
-    private int stock;
+    private int stock; 
 
-    Product() {
-        this.id = "";
-        this.name = "";
+    // Constructor sin parámetros
+    public Product() {
+        this.id = "N/A";
+        this.name = "Sin nombre";
         this.price = 0.0;
         this.stock = 0;
     }
 
-    Product(String id, String name, double price, int stock) {
+    // Constructor con parámetros
+    public Product(String id, String name, double price, int stock) {
         this.id = id;
         this.name = name;
-        this.price = price;
-        this.stock = stock;
-
+        setPrice(price); // Valida el precio inicial
+        setStock(stock); // Valida el stock inicial
     }
 
-    public String getId() {
-        return this.id;
-    }
+    // --- Métodos de acceso (Getters) ---
+    public String getId() { return id; }
+    public String getName() { return name; }
+    public double getPrice() { return price; }
+    public int getStock() { return stock; }
 
-    public String getName() {
-        return this.name;
-    }
+    // --- Métodos de modificación (Setters) con validación ---
+    
+    public void setId(String id) { this.id = id; }
+    public void setName(String name) { this.name = name; }
 
-    public double getPrice() {
-        return this.price;
-    }
-
-    public int getStock() {
-        return this.stock;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    // Validación: Lanza excepción si el precio es negativo
     public void setPrice(double price) {
-        if (price >= 0) {
-            this.price = price;
-        } 
-
+        if (price < 0) {
+            throw new IllegalArgumentException("El precio no puede ser negativo.");
+        }
+        this.price = price;
     }
 
+    // Validación: Lanza excepción si el stock es negativo
     public void setStock(int stock) {
-
-        if (stock >= 0) {
-            this.stock = stock;
-        } 
-        
-    }
+        if (stock < 0) {
+            throw new IllegalArgumentException("El stock no puede ser negativo.");
+        }
+        this.stock = stock;
+    }   
 
     @Override
     public String toString() {
-        return "Producto [ID: " + this.id + ", Nombre: " + this.name + ", Precio: " + this.price + ", Stock: "
-                + this.stock + "]";
+        return "Producto [ID: " + id + ", Nombre: " + name + ", Precio: " + price + ", Stock: " + stock + "]";
     }
-
 }
